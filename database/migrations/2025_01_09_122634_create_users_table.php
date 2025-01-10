@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('Username',50)->unique();
             $table->string('Password',255);
             $table->enum('Role',['Admin','Tester']);
-            $table->timestamp('Created_at')->useCurrent(); 
+            $table->timestamp('Created_at')->useCurrent();
         });
     }
 
