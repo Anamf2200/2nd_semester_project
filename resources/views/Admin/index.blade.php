@@ -19,10 +19,11 @@
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+        
                 {{-- <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" /> --}}
-                    <a href="http://" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" id="btnNavbarSearch" type="button">Register</button></a>
-                 <a href="http://" target="_blank" rel="noopener noreferrer">   <button class="btn btn-primary" id="btnNavbarSearch" type="button">Login</button></a>
+                    <a href="{{route('register')}}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" id="btnNavbarSearch" type="button">Add tester</button></a>
+                 <a href="{{route('user.logout')}}" method="POST"  rel="noopener noreferrer">   <button class="btn btn-primary" id="btnNavbarSearch" type="button">Logout</button></a>
 
                 </div>
             </form>
