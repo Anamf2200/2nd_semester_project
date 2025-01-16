@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('testings', function (Blueprint $table) {
-           $table->string('Test_id',12)->primary();
+           $table->string('Test_id',12)->primary()->autoIncrement();
            $table->string('Product_id',10);
            $table->foreign('Product_id')->references('Product_Id')->on('products')->onDelete('cascade');
            $table->string('Test_type',50);

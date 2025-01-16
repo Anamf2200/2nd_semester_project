@@ -18,9 +18,14 @@ return new class extends Migration
           $table->integer('Department_id');
           $table->foreign('Department_id')->references('Department_id')->on('departments')->onDelete('cascade');
           $table->date('Test_date');
-          $table->enum('Status',['In_progress','Completed']);
+          $table->enum('Status',['Progress','Completed']);
           $table->text('Remarks');
         });
+
+      
+    }
+    public function edit(){
+            
     }
 
     /**
