@@ -60,7 +60,7 @@
                     </div>
                     <div class="mt-2">
                         <label for="test_result" class="form-label">Test Result</label>
-                        <select name="test_result" id="test_result" class="form-control"value={{$emp->Test Result}}>
+                        <select name="test_result" id="test_result" class="form-control"value={{$emp->Test_result}}>
                             <option value="">-- Select Result --</option> 
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>

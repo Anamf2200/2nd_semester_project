@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="{{route('product.update',$emp->Product_Id)}}" method="post">
+                <form action="{{route('product.update',$emp->Product_Id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-2">
                         <label for="n">Product_id</label>
@@ -30,7 +30,12 @@
                     </div>
                     <div class="mt-2">
                         <label for="n">Product_Code</label>
-                        <input type="text" name="product_code" id="n" class="form-control"value='{{$emp->Product_Code}}'>
+                        <input type="text" name="product_code" id="n" class="form-control"value='{{$emp->Product_code}}' readonly>
+                    </div>
+
+                    <div class="mt-2">
+                        <label for="n">Bar_Code</label>
+                        <input type="text" name="product_code" id="n" class="form-control"value='{{$emp->Product_code}}' readonly>
                     </div>
 
                     <div class="mt-2">
@@ -46,6 +51,10 @@
                     <div class="mt-2">
                         <label for="a">Product_name</label>
                         <input type="text" name="product_name" id="a" class="form-control"value='{{$emp->Product_name}}'>
+                    </div>
+                    <div class="mt-2  image">
+                        <label for="a">Product_image</label>
+                        <input type="file" name="file" id="a" class="form-control">
                     </div>
                     <div class="mt-2">
                         <label for="a">Manufacturing_date</label>

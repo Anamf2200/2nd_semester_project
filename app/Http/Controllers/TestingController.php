@@ -19,7 +19,7 @@ class TestingController extends Controller
     public function store(Request $req)
     {
         $validator = Validator::make($req->all(), [
-            'product_id' => 'required|exists:products,Product_Id',
+'product_id' => 'required|exists:products,Product_Id',
             'test_type' => 'required|string|max:50',
             'test_date' => 'required|date',
             'tested_by' => 'required|string|max:100',
@@ -82,7 +82,7 @@ public function show(string $id)
     {
         $validator = Validator::make($req->all(), [
             'test_id' => 'required|exists:testings,Test_id',
-            'product_id' => 'required|exists:products,Product_Id',
+'product_id' => 'required|exists:products,Product_Id',
             'test_type' => 'required|string|max:50',
             'test_date' => 'required|date',
             'tested_by' => 'required|string|max:100',
@@ -120,4 +120,26 @@ public function show(string $id)
 
     
     }
+
+    public function search(Request $req)
+    {
+        // Start building the query
+        $query = DB::table('testings')
+            ->join('products', 'testings.Product_id', '=', 'products.Product_Id')
+            ->select('testings.*', 'products.Product_name');
+    
+        // Check for a search query and filter by product name
+        if ($req->has('search') && $req->search != '') {
+            $query->where('products.Product_name', 'LIKE', '%' . $req->search . '%');
+        }
+    
+        // Execute the query
+        $testings = $query->get();
+    
+        // Get all products for the dropdown
+        $products = DB::table('products')->get();
+    
+        return view('testing.search', compact('testings', 'products', 'req'));
+    }
+    
 }

@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard')->middleware(AdminMiddleware::class);
-Route::get('/login', [AdminController::class,'login'])->name('login');
+Route::get('/', [AdminController::class,'login'])->name('login');
 Route::post('/admin/login',[AdminController::class,'authenticate'])->name('user.authenticate');
 Route::get('/logout',[AdminController::class,'logout'])->name('user.logout');
 
@@ -32,6 +32,7 @@ Route::get('/tester_dashboard',[TesterController::class,'TesterDashboard'])->nam
 
 Route::get('/create',[ProductController::class,'create'])->name('product.create');
 Route::get('/read',[ProductController::class,'read'])->name('product.read');
+
 ROute::post('/store',[ProductController::class,'store'])->name('product.store');
 Route::get('/show/{productId}',[ProductController::class,'show'])->name('product.show');
 Route::post('/update/{id}',[ProductController::class,'update'])->name('product.update');
@@ -48,6 +49,8 @@ Route::get('testing/edit/{id}',[TestingController::class,'edit'])->name('testing
 Route::post('testing/update/{id}',[TestingController::class,'update'])->name('testing.update');
 Route::post('testing/delete/{id}',[TestingController::class,'delete'])->name('testing.delete');
 Route::get('testing/show/{id}',[TestingController::class,'show'])->name('testing.show');
+Route::get('/testing/search', [TestingController::class, 'search'])->name('testing.search');
+
 
 
 //Failed Test

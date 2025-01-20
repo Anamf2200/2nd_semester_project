@@ -7,19 +7,29 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+<style>
+    img{
+        height: 80px;
+        width: 60px;
+    }
+</style>
 <body>
+
+    
     <div class="container mt-3">
     <a class="btn btn-primary" href="{{route('product.create')}}" >Add products</a>
     <div class="row mt-2">
         <div class="col-12">
-            <table class="table table-bordered table-success table-striped ">
+            <table class="table table-bordered table-success table-striped text-center item-center">
                 <tr>
                     <th>Product_id</th>
                     <th>Product_Code</th>
+                    <th>Bar_Code</th>
                     <th>Revision_version</th>
                     <th>Manufacturing_number</th>
                     <th>Product_name</th>
                     <th>Manufacturing_date</th>
+                    <th>Product_Image</th>
                     <th>Status</th>
 
                     <th>Action</th>
@@ -30,10 +40,12 @@
                 <tr>
                 <td>{{$emp->Product_Id}}</td>
                 <td>{{$emp->Product_code}}</td>
+                <td>{{$emp->Bar_code}}</td>
                 <td>{{$emp->Revision_version}}</td>
                 <td>{{$emp->Manufacturing_number}}</td>
                 <td>{{$emp->Product_name}}</td>
                 <td>{{$emp->Manufacturing_date}}</td>
+                <td><img src="{{asset('storage/'.$emp->Image)}}" alt=""></td>
                 <td>{{$emp->Status}}</td>
                 <td><a class="btn btn-warning" href="{{route('product.show',$emp->Product_Id)}}">View</a></td>
                 <td> <a class="btn btn-warning" href="{{route('product.edit',$emp->Product_Id)}}">Update</button></td>

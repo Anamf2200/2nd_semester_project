@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('test_logs', function (Blueprint $table) {
           $table->integer('Log_id')->primary()->autoIncrement();
-          $table->string('Test_id',12);
+          $table->unsignedBigInteger('Test_id');
           $table->foreign('Test_id')->references('Test_id')->on('testings')->onDelete('cascade');
           $table->integer('Department_id');
           $table->foreign('Department_id')->references('Department_id')->on('departments')->onDelete('cascade');

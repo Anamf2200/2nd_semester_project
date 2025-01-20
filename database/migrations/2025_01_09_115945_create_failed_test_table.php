@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('failed_test', function (Blueprint $table) {
-          $table->integer('Failed_id')->primary()->autoIncrement();
-          $table->string('Test_id',12);
+  $table->id('Failed_id');    
+         $table->unsignedBigInteger('Test_id');
           $table->foreign('Test_id')->references('Test_id')->on('testings')->onDelete('cascade');
           $table->text('Failure_reason');
           $table->date('Remanufactured_date');

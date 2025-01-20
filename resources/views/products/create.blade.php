@@ -6,7 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
+<style>
+    img{
+        height: 80px;
+        width: 60px;
+    }
+</style>
 <body>
     @if ($errors->any())
     <div class="alert alert-danger">
@@ -22,12 +29,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="{{route('product.store')}}" method="post">
+                <form action="{{route('product.store')}}" method="post"enctype="multipart/form-data">
                     @csrf
-                    <div class="mt-2">
+                    {{-- <div class="mt-2">
                         <label for="n">Product_Code</label>
                         <input type="text" name="product_code" id="n" class="form-control">
-                    </div>
+                    </div> --}}
 
                     <div class="mt-2">
                         <label for="e">Revision_version</label>
@@ -46,6 +53,10 @@
                     <div class="mt-2">
                         <label for="a">Manufacturing_date</label>
                         <input type="date" name="manufacturing_date" id="a" class="form-control">
+                    </div>
+                    <div class="mt-2  image">
+                        <label for="a">Product_image</label>
+                        <input type="file" name="file" id="a" class="form-control">
                     </div>
                     <div class="mt-2">
                         <label for="a">Status</label>

@@ -12,13 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->string('Product_Id', 10)->primary(); 
-                     $table->string('Product_code',5);
+            $table->id('Product_Id'); 
+                     $table->integer('Product_code');
+                     $table->integer('Bar_code');
          $table->string('Revision_version',3);
          $table->string('Manufacturing_number',5);
          $table->string('Product_name',100);
          $table->date('Manufacturing_date');
-         $table->enum('Status',['Pending','Tested','Failed','Remanufactured'])->default('Pending');
+         $table->string('Image');   
+               $table->enum('Status',['Pending','Tested','Failed','Remanufactured'])->default('Pending');
+
         });
     }
 
