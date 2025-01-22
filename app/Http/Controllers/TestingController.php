@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Testing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Auth\Events\Validated;
+use Illuminate\Support\Facades\Validator;
+
 
 class TestingController extends Controller
 {
@@ -67,8 +69,9 @@ class TestingController extends Controller
     public function edit(string $id)
 {
     $data = DB::table('testings')->where('Test_id', $id)->first();
+    $testings=DB::table('testings')->get();
     $products = DB::table('products')->get(); 
-    return view('testing.update', ['emp' => $data, 'products' => $products]);
+    return view('testing.update', ['emp' => $data, 'products' => $products,'testings'=>$testings]);
 }
 public function show(string $id)
 {

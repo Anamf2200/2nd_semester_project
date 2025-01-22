@@ -22,8 +22,7 @@
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         
-                {{-- <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" /> --}}
+                
                  <a href="{{route('user.logout')}}" method="POST"  rel="noopener noreferrer">   <button class="btn btn-primary" id="btnNavbarSearch" type="button">Logout</button></a>
 
                 </div>
@@ -44,7 +43,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <div class="sb-sidenav-menu-heading">Products</div>
                             <a class="nav-link" href="{{route('product.read')}}"target='blank'>
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                Products
@@ -56,7 +55,9 @@
                                 Testings
                             </a>
                           
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <div class="sb-sidenav-menu-heading">Testings
+                                
+                            </div>
                             <a class="nav-link" href="{{route('failed.read')}}"target='blank'>
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Failed Tests

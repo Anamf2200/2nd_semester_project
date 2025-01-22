@@ -41,11 +41,11 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">SRS</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <div class="sb-sidenav-menu-heading">Products</div>
                             <a class="nav-link" href="{{route('product.read')}}"target='blank'>
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                Products
@@ -57,7 +57,7 @@
                                 Testings
                             </a>
                           
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <div class="sb-sidenav-menu-heading">Primary</div>
                             <a class="nav-link" href="{{route('failed.read')}}"target='blank'>
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Failed Tests

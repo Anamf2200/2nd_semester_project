@@ -31,7 +31,6 @@
                     <div class="mb-3">
                         <label for="product_id" class="form-label">Select Test_type</label>
                         <select name="test_type" id="product_id" class="form-control" >
-                            <option value="">-- Select Test_type --</option>
                             @foreach ($testings as $testing)
                                 <option value="{{ $testing->Test_id }}" >{{ $testing->Test_type }}</option>
 
@@ -42,17 +41,17 @@
 
                     <div class="mt-2">
                         <label for="e">Failure_reason</label>
-                        <input type="text" name="failure_reason" id="e" class="form-control"value='{{$testing->Failure_reason}}'>
+                        <input type="text" name="failure_reason" id="e" class="form-control"value='{{$emp->Failure_reason}}'>
                     </div>
 
                     <div class="mt-2">
                         <label for="ad">Remanufactured_date</label>
-                        <input type="date" name="remanufactured_date" id="ad" class="form-control"value='{{$testing->Remanufactured_date}}'>
+                        <input type="date" name="remanufactured_date" id="ad" class="form-control"value='{{$emp->Remanufactured_date}}'>
                     </div>
 
                     <div class="mt-2">
                         <label for="a">Remarks</label>
-                        <input type="text" name="remarks" id="a" class="form-control"value='{{$testing->Remarks}}'>
+                        <input type="text" name="remarks" id="a" class="form-control"value='{{$emp->Remarks}}'>
                     </div>
                     
                     <div class="mt-2">

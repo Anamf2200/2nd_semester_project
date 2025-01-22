@@ -16,4 +16,9 @@ class Product extends Model
             'Manufacturing_number', 'Product_name', 
             'manufacturing_date', 'Status',
         ];
+
+        public function testing()
+    {
+        return $this->hasMany(Testing::class); // 'testing_id' is the foreign key in the products table
+    }
     }

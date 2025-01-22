@@ -31,14 +31,13 @@
                     <div class="mb-3">
                         <label for="product_id" class="form-label">Select Product</label>
                         <select name="product_id" id="product_id" class="form-control">
-                            <option value="">-- Select a Product --</option>
                             @foreach ($products as $product)
                                 <option value="{{ $product->Product_Id }}">{{ $product->Product_name }}</option>
 
                             @endforeach
                         </select>
                     </div>
-        
+                
 
                     <div class="mt-2">
                         <label for="e">Test_type</label>
@@ -58,14 +57,20 @@
                         <label for="a">Test_criteria</label>
                         <input type="text" name="test_criteria" id="a" class="form-control"value={{$emp->Test_criteria}}>
                     </div>
-                    <div class="mt-2">
-                        <label for="test_result" class="form-label">Test Result</label>
-                        <select name="test_result" id="test_result" class="form-control"value={{$emp->Test_result}}>
-                            <option value="">-- Select Result --</option> 
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
+                   
+
+
+                        <div class="mb-3">
+                            <label for="product_id" class="form-label">Select Product</label>
+                            <select name="test_result" id="product_id" class="form-control">
+                                @foreach ($testings as $data)
+                                    <option value="{{ $data->Test_result }}">{{ $data->Test_result }}</option>
+    
+                                @endforeach
+                            </select>
+                        </div>
                         
+
                     </div>
                         <div class="mt-2">
                             <label for="a">Remarks</label>

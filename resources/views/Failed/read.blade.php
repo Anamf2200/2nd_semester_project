@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container mt-3">
-    {{-- <a class="btn btn-primary" href="{{route('failed.create')}}" >Add new testing</a> --}}
+    {{-- <a class="btn btn-primary" href="{{route('failed.create')}}" >Add failed test</a> --}}
     <div class="row mt-2">
         <div class="col-12">
             <table class="table table-bordered table-success table-striped ">
