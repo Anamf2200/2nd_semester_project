@@ -17,10 +17,10 @@
 
     
     <div class="container mt-3">
-    <a class="btn btn-primary" href="{{route('product.create')}}" >Add products</a>
+    <a class="btn btn-warning" href="{{route('product.create')}}" >Add products</a>
     <div class="row mt-2">
         <div class="col-12">
-            <table class="table table-bordered table-success table-striped text-center item-center">
+            <table class="table table-bordered table-primary table-striped text-center item-center">
                 <tr>
                     <th>Product_id</th>
                     <th>Product_Code</th>

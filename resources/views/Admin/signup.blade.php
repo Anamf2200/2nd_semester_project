@@ -21,26 +21,28 @@
         </ul>
     </div>
 @endif
-
-    <div class="mb-3">
+<div class="container-fluid p-5">
+    <h1>Add Tester</h1>
+    <div class="mb-3 col-8">
         <label for="username" class="form-label">Email</label>
         <input type="email" class="form-control" id="username" name="email" required>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 col-8">
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" name="password" required>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 col-8">
         <label for="password_confirmation" class="form-label">Confirm Password</label>
         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 col-8">
         <label for="role" class="form-label">Role</label>
         <select id="role" name="role" class="form-control" required>
             <option value="Tester">Tester</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Register Tester</button>
+    <button type="submit" class="btn btn-warning">Register</button>
+</div>
 </form>
 
 </body>

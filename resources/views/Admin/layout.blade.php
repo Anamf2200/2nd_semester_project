@@ -24,8 +24,8 @@
         
                 {{-- <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" /> --}}
-                    <a href="{{route('register')}}" target="_blank" rel="noopener noreferrer"><button class="btn btn-primary" id="btnNavbarSearch" type="button">Add tester</button></a>
-                 <a href="{{route('user.logout')}}" method="POST"  rel="noopener noreferrer">   <button class="btn btn-primary" id="btnNavbarSearch" type="button">Logout</button></a>
+                    <a href="{{route('register')}}" target="_blank" rel="noopener noreferrer"><button class="btn btn-success" id="btnNavbarSearch" type="button">Add tester</button></a>
+                 <a href="{{route('user.logout')}}" method="POST"  rel="noopener noreferrer">   <button class="btn btn-danger" id="btnNavbarSearch" type="button">Logout</button></a>
 
                 </div>
             </form>
